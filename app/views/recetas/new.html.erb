@@ -1,0 +1,15 @@
+<header>
+	<h1>Nueva Receta</h1>
+</header>
+<div style="text-align: center;">
+	<%= form_for @receta, :url =>  user_recetas_path do |f| %>
+		<div><%= f.label :nombre %><br><%= f.text_field :nombre %></div>
+		<div><%= f.label :imagen_url %><br><%= f.file_field :imagen_url %></div>
+		<div><%= f.label :fecha %><br><%= f.text_field :fecha %></div>
+		<div><%= f.label :descripcion %><br><%= f.text_field :descripcion %></div>
+		<div><%= f.label :usuario %><br><%= f.text_field :usuario %></div>	
+		<div><%= f.label :ingredientes %><br><%= f.text_field :ingredientes %></div>
+		<div><%= f.label :preparacion %><br><%= f.text_field :preparacion %></div>
+		<div><%= f.submit "Nueva Receta" %></div>
+	<% end %>
+</div>

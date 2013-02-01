@@ -1,0 +1,19 @@
+<h1>Recetas de <%= current_user.email %> </h1>
+<div class="row-fluid">
+    <% @recetas.each do |receta| %>
+        <div class="receta span3">
+            <div class="img-receta">
+                <img src="/assets/rails.png" alt="">
+            </div>
+            <div class="caption">
+                <p><%= link_to receta.nombre, user_receta_path(receta.user_id,receta) %><br>
+                <%= receta.descripcion %><br>
+                <%= receta.fecha %></p>
+                <% if current_user %>
+                    <p><%= link_to 'Edit', edit_user_receta_path(current_user, receta) %> | 
+                    <%= link_to 'Destroy', user_receta_path(current_user, receta), :confirm => 'Are you sure?', :method => :destroy %></p></p>
+                <% end %>
+            </div>
+        </div>
+    <% end %>
+</div>

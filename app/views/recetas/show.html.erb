@@ -1,0 +1,14 @@
+<header>
+	<h1><%= @receta.nombre %></h1>
+</header>
+
+<div style="text-align: center;">
+	<div><label>imagen_url: </label><br><%= @receta.imagen_url %></div>
+	<div><label>fecha: </label><br><%= @receta.fecha %></div>
+	<div><label>descripcion: </label><br><%= @receta.descripcion %></div>
+	<div><label>usuario: </label><br><%= @receta.usuario %></div>	
+	<div><label>ingredientes: </label><br><%= @receta.ingredientes %></div>
+	<div><label>preparacion: </label><br><%= @receta.preparacion %></div>
+	<br>
+	<%= link_to 'Listado de Recetas', root_path %>
+</div>

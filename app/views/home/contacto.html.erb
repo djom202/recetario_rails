@@ -1,0 +1,28 @@
+<header>
+  <h1>Contacto</h1>
+</header>
+<div class="row-fluid">
+  <form action=""  class="form-horizontal span6 offset4">
+    <div class="control-group">
+      <label class="control-label" for="email_name">Name:</label>
+      <div class="controls"><%= text_field "email", "name", :size => 30 %></div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="email_address">Email Address:</label>
+      <div class="controls"><%= text_field "email", "address", :size => 30 %></div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="email_subject">Subject:</label>
+      <div class="controls"><%= text_field "email", "subject", :size => 30 %></div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="email_body">Body:</label>
+      <div class="controls"><%= text_area "email", "body", :rows => 8, :cols => 30 %></div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <input value="Send Email" class="btn btn-primary" type="submit" />
+      </div>
+    </div>
+  </form>
+</div>

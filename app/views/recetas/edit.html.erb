@@ -1,0 +1,16 @@
+<header>
+	<h1>Editar Receta</h1>
+</header>
+
+<div style="text-align: center;">
+	<%= form_for @receta, :url => edit_user_receta_path do |f| %>
+	  <div><%= f.label :nombre %><br><%= f.text_field :nombre %></div>
+	  <div><%= f.label :imagen_url %><br><%= f.text_field :imagen_url %></div>
+	  <div><%= f.label :fecha %><br><%= f.text_field :fecha %></div>
+	  <div><%= f.label :descripcion %><br><%= f.text_field :descripcion %></div>
+	  <div><%= f.label :usuario %><br><%= f.text_field :usuario %></div>	
+	  <div><%= f.label :ingredientes %><br><%= f.text_field :ingredientes %></div>
+	  <div><%= f.label :preparacion %><br><%= f.text_field :preparacion %></div>
+	  <div><%= f.submit "update",:class => "btn btn-primary" %></div>
+	<% end %>
+</div>
