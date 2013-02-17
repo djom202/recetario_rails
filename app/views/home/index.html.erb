@@ -9,7 +9,7 @@
             </div>
             <div class="caption">
                 <p><%= link_to receta.nombre, user_receta_path(receta.user_id,receta) %><br>
-                <% @user = User.find(receta.user_id) %><%= @user %><br>
+                <%= receta.cocinero %><br>
                 <%= receta.descripcion %><br>
                 <%= receta.fecha %></p>
                 <% if current_user %>
